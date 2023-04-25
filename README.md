@@ -1,41 +1,52 @@
-<p align="center">
-    <a href="https://getcomposer.org">
-        <img src="https://getcomposer.org/img/logo-composer-transparent.png" alt="Composer">
-    </a>
-</p>
-<h1 align="center">Dependency Management for PHP</h1>
+<h1 align="center">Dependency Management for PHP without propaganda and banners</h1>
 
-Composer helps you declare, manage, and install dependencies of PHP projects.
-
-See [https://getcomposer.org/](https://getcomposer.org/) for more information and documentation.
-
-[![Continuous Integration](https://github.com/composer/composer/workflows/Continuous%20Integration/badge.svg?branch=main)](https://github.com/composer/composer/actions)
+Composer helps you declare, manage, and install dependencies of PHP projects wihtout other shit like banners, adv, propaganda and etc.
 
 Installation / Usage
 --------------------
 
-Download and install Composer by following the [official instructions](https://getcomposer.org/download/).
+1. Install docker
+2. Run `/.dokcer-build` this will build `composer.phar`
+3. Copy `composer.phar` into your project or make it global `sudo mv composer.phar /usr/local/bin/composer`
 
 For usage, see [the documentation](https://getcomposer.org/doc/).
 
 Packages
 --------
 
-Find public packages on [Packagist.org](https://packagist.org).
+Instead of [Packagist.org](https://packagist.org) use `vcs` directive to get your dependencies like this
 
-For private package hosting take a look at [Private Packagist](https://packagist.com).
+```json
+{
+  "type": "project",
+  "license": "proprietary",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "repositories": [
+      {
+          "packagist.org": false
+      },
+      {
+          "type": "vcs",
+          "url": "https://my.private.repo/my-package.git"
+      },
+      {
+          "type": "composer",
+          "url": "https://mycomposerpackages.com"
+      },
+      {
+          "type": "vcs",
+          "url": "git@github.com:symfony/symfony.git"
+      }
+  ]
+}
+```
+
 
 Community
 ---------
 
-Follow [@packagist](https://twitter.com/packagist) or [@seldaek](https://twitter.com/seldaek) on Twitter for announcements, or check the [#composerphp](https://twitter.com/search?q=%23composerphp&src=typed_query&f=live) hashtag.
-
-For support, Stack Overflow offers a good collection of
-[Composer related questions](https://stackoverflow.com/questions/tagged/composer-php), or you can use the [GitHub discussions](https://github.com/composer/composer/discussions).
-
-Please note that this project is released with a
-[Contributor Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
-By participating in this project and its community you agree to abide by those terms.
+Say `no` to `social netowkrs shit` in your work and respect your maintainers and others who do it software together with you.
 
 Requirements
 ------------
@@ -53,15 +64,8 @@ should be automatically selected.
 Authors
 -------
 
-- Nils Adermann  | [GitHub](https://github.com/naderman)  | [Twitter](https://twitter.com/naderman) | <naderman@naderman.de> | [naderman.de](https://naderman.de)
-- Jordi Boggiano | [GitHub](https://github.com/Seldaek) | [Twitter](https://twitter.com/seldaek) | <j.boggiano@seld.be> | [seld.be](https://seld.be)
+[contributors](https://github.com/composer/composer/contributors) who participated in this project.
 
-See also the list of [contributors](https://github.com/composer/composer/contributors) who participated in this project.
-
-Security Reports
-----------------
-
-Please send any sensitive issue to [security@packagist.org](mailto:security@packagist.org). Thanks!
 
 License
 -------

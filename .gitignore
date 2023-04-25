@@ -2,6 +2,7 @@
 /.project
 /.buildpath
 /composer.phar
+/getcomposer.phar
 /vendor
 /nbproject
 .phpunit.result.cache

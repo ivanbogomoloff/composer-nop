@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker build -t php-composer-docker-builder .
+docker run -i --workdir /composer -u 0:1000 --rm --name composer -v ${PWD}:/composer php-composer-docker-builder /bin/bash bin/build
+
+
+
+

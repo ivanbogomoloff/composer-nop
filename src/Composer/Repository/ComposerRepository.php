@@ -1477,6 +1477,10 @@ class ComposerRepository extends ArrayRepository implements ConfigurableReposito
                 }
 
                 $data = $response->decodeJson();
+                if(isset($data['info']))
+                {
+                    $data['info'] = '';
+                }
                 HttpDownloader::outputWarnings($this->io, $this->url, $data);
 
                 if ($cacheKey && !$this->cache->isReadOnly()) {
