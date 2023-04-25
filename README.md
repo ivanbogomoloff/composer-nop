@@ -6,7 +6,7 @@ Installation / Usage
 --------------------
 
 1. Install docker
-2. Run `/.dokcer-build` this will build `composer.phar`
+2. Run `./docker-build` this will build `composer.phar`
 3. Copy `composer.phar` into your project or make it global `sudo mv composer.phar /usr/local/bin/composer`
 
 For usage, see [the documentation](https://getcomposer.org/doc/).
